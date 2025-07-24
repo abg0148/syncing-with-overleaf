@@ -31,29 +31,9 @@
     \draw[->, thick] (p3) -- (p4);
     \draw[->, thick] (p4) -- (p5);
 
-    % Lune for (p3, p4)
+    % Circle centered at p3 passing through p4
     \path let \p1=(p3), \p2=(p4), \n1={veclen(\x2-\x1,\y2-\y1)} in
-        \draw[red, dotted] (p3) circle (\n1)
-        (p4) circle (\n1);
-
-    \begin{scope}
-        \clip let \p1=(p3), \p2=(p4), \n1={veclen(\x2-\x1,\y2-\y1)} in
-            (p3) circle (\n1);
-        \path let \p1=(p3), \p2=(p4), \n1={veclen(\x2-\x1,\y2-\y1)} in
-            (p4) circle (\n1) [fill=red, fill opacity=0.1];
-    \end{scope}
-
-    % Lune for (p4, p5)
-    \path let \p1=(p4), \p2=(p5), \n1={veclen(\x2-\x1,\y2-\y1)} in
-        \draw[blue, dotted] (p4) circle (\n1)
-        (p5) circle (\n1);
-
-    \begin{scope}
-        \clip let \p1=(p4), \p2=(p5), \n1={veclen(\x2-\x1,\y2-\y1)} in
-            (p4) circle (\n1);
-        \path let \p1=(p4), \p2=(p5), \n1={veclen(\x2-\x1,\y2-\y1)} in
-            (p5) circle (\n1) [fill=blue, fill opacity=0.1];
-    \end{scope}
+        \draw[red, dotted] (p3) circle (\n1);
 
 \end{tikzpicture}
 
