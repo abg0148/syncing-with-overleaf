@@ -33,8 +33,8 @@
 
     % Lune for (p3, p4)
     \path let \p1=(p3), \p2=(p4), \n1={veclen(\x2-\x1,\y2-\y1)} in
-        node[draw, circle, red, dotted, minimum size=2*\n1] at (\p1) {}
-        node[draw, circle, red, dotted, minimum size=2*\n1] at (\p2) {};
+        \draw[red, dotted] (p3) circle (\n1)
+        (p4) circle (\n1);
 
     \begin{scope}
         \clip let \p1=(p3), \p2=(p4), \n1={veclen(\x2-\x1,\y2-\y1)} in
@@ -45,8 +45,8 @@
 
     % Lune for (p4, p5)
     \path let \p1=(p4), \p2=(p5), \n1={veclen(\x2-\x1,\y2-\y1)} in
-        node[draw, circle, blue, dotted, minimum size=2*\n1] at (\p1) {}
-        node[draw, circle, blue, dotted, minimum size=2*\n1] at (\p2) {};
+        \draw[blue, dotted] (p4) circle (\n1)
+        (p5) circle (\n1);
 
     \begin{scope}
         \clip let \p1=(p4), \p2=(p5), \n1={veclen(\x2-\x1,\y2-\y1)} in
