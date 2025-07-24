@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}
+    % Draw axes
+    \draw[->] (-1,0) -- (3,0) node[right] {$x$};
+    \draw[->] (0,-1) -- (0,3) node[above] {$y$};
+
+    % Draw points
+    \filldraw (0,2) circle (2pt) node[above right] {$(0,2)$};
+    \filldraw (2,0) circle (2pt) node[below right] {$(2,0)$};
+
+    % Draw line
+    \draw (0,2) -- (2,0);
+\end{tikzpicture}
+
+\end{document}
