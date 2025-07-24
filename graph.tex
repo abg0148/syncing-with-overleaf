@@ -58,6 +58,11 @@
         \clip let \p1=(q), \p2=(p5), \n1={veclen(\x2-\x1,\y2-\y1)} in (q) circle (\n1);
         \path[fill=magenta!40, fill opacity=0.25, draw=none] let \p1=(p5), \p2=(q), \n1={veclen(\x2-\x1,\y2-\y1)} in (p5) circle (\n1);
     \end{scope}
+    % Lune between circle centered at p3 and p5
+    \begin{scope}
+        \clip let \p1=(p3), \p2=(p5), \n1={veclen(\x2-\x1,\y2-\y1)} in (p3) circle (\n1);
+        \path[fill=brown!40, fill opacity=0.25, draw=none] let \p1=(p5), \p2=(p3), \n1={veclen(\x2-\x1,\y2-\y1)} in (p5) circle (\n1);
+    \end{scope}
 
     % Draw directed edges on top of circles/shadings, but below points
     \draw[->, thin] (p1) -- (p2);
